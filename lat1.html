@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Latihan Javascript</title>
+
+    <script>
+        function tanyaBilangan() {
+            var bil = parseFloat(document.fform.bilangan.value);
+            var jenis = "";
+            if(isNaN(bil)) {
+                alert("Anda Belum Memasukkan Bilangan");
+            } else {
+                if (bil > 0) {
+                    jenis = "Adalah Bilangan Positif";
+                } else if (bil < 0) {
+                    jenis = "Adalah Bilangan Negatif";
+                } else {
+                    jenis = "Adalah Nol";
+                }
+                alert(bil+ " " +jenis);
+            }
+        }
+
+        function namaHariSwitch() {
+            var hariS = parseInt(document.form2.hari.value);
+
+            switch (hariS) {
+                case 1:
+                    alert("Anda Memilih Hari Monday");
+                    break;
+
+                case 2:
+                    alert("Anda Memilih Hari Tuesday");
+                    break;    
+            
+                case 3:
+                    alert("Anda Memilih Hari Wednesday");
+                    break;
+
+                case 4:
+                    alert("Anda Memilih Hari Thursday");
+                    break;
+
+                case 5:
+                    alert("Anda Memilih Hari Friday");
+                    break;
+
+                case 6:
+                    alert("Anda Memilih Hari Saturday");
+                    break;
+
+                case 7:
+                    alert("Anda Memilih Hari Sunday");
+                    break;
+                    
+                default:
+                    alert("NULL");
+                    break;
+            }            
+        }
+
+        function namaHariIfElse() {
+            var hari = parseInt(document.form3.hari.value);
+
+            if (hari == 1) {
+                alert("Anda Memilih Hari Monday");
+            } else if (hari == 2) {
+                alert("Anda Memilih Hari Tuesday");
+            } else if (hari == 3) {
+                alert("Anda Memilih Hari Wednesday");
+            } else if (hari == 4) {
+                alert("Anda Memilih Hari Thursday");
+            } else if (hari == 5) {
+                alert("Anda Memilih Hari Friday");
+            } else if (hari == 6) {
+                alert("Anda Memilih Hari Saturday");
+            } else if (hari == 7) {
+                alert("Anda Memilih Hari Sunday");
+            } else {
+                alert("NULL");
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <form name="fform">
+        <input type="number" name="bilangan" placeholder="Masukkan Bilangan" value="" autocomplete="off">
+        <br><br>
+        <input type="button" onclick="tanyaBilangan()" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+
+    <br>
+    <hr>
+
+    <p>Nama Hari Menggunakan Switch</p>
+    <form name="form2">
+        <select name="hari">
+            <option value="1">Senin</option>
+            <option value="2">Selasa</option>
+            <option value="3">Rabu</option>
+            <option value="4">Kamis</option>
+            <option value="5">Jumat</option>
+            <option value="6">Sabtu</option>
+            <option value="7">Minggu</option>
+        </select>
+        <br><br>
+        <input type="button" onclick="namaHariSwitch()" value="Submit">
+    </form>
+
+    <br><hr>
+
+    <p>Nama Hari Menggunakan If Else</p>
+    <form name="form3">
+        <select name="hari">
+            <option value="1">Senin</option>
+            <option value="2">Selasa</option>
+            <option value="3">Rabu</option>
+            <option value="4">Kamis</option>
+            <option value="5">Jumat</option>
+            <option value="6">Sabtu</option>
+            <option value="7">Minggu</option>
+        </select>
+        <br><br>
+        <input type="button" onclick="namaHariIfElse()" value="Submit">
+    </form>
+
+</body>
+</html>
